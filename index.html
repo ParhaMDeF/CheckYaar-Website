@@ -5,19 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>چک‌یار — تحویل خانه، با خیال راحت</title>
+  <link rel="icon" href="../mobile/assets/images/app_logo.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="wrap">
     <nav>
-      <a class="brand" href="#"><span class="mark"><!-- @license lucide-static v0.468.0 - ISC -->
-      <svg aria-hidden="true" focusable="false" class="lucide lucide-house" xmlns="http://www.w3.org/2000/svg" width=
-      "24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round"
-      stroke-linejoin="round">
-      <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
-      <path d=
-      "M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-      </svg></span> چک‌یار</a>
+      <a class="brand" href="#"><img class="mark" src="../mobile/assets/images/app_logo.png" alt="" width="39"
+      height="39" decoding="async"> چک‌یار</a>
       <div class="navlinks">
         <a href="#benefits">برای مالک و مستأجر</a><a href="#how">چطور کار می‌کنه؟</a><a href="#faq">سؤال‌های شما</a>
       </div><a class="btn small" href="#download">دانلود رایگان <span><!-- @license lucide-static v0.468.0 - ISC -->
@@ -152,23 +147,35 @@
           </div>
         </div>
       </section>
-      <div class="ribbon">
-        <span><!-- @license lucide-static v0.468.0 - ISC -->
-        <svg aria-hidden="true" focusable="false" class="lucide lucide-check" xmlns="http://www.w3.org/2000/svg" width=
-        "24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round"
-        stroke-linejoin="round">
-        <path d="M20 6 9 17l-5-5"></path></svg> ثبت عکس و وضعیت ملک</span><span>
-        <!-- @license lucide-static v0.468.0 - ISC -->
-        <svg aria-hidden="true" focusable="false" class="lucide lucide-check" xmlns="http://www.w3.org/2000/svg" width=
-        "24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round"
-        stroke-linejoin="round">
-        <path d="M20 6 9 17l-5-5"></path></svg> بررسی و تأیید مستأجر</span><span>
-        <!-- @license lucide-static v0.468.0 - ISC -->
-        <svg aria-hidden="true" focusable="false" class="lucide lucide-check" xmlns="http://www.w3.org/2000/svg" width=
-        "24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round"
-        stroke-linejoin="round">
-        <path d="M20 6 9 17l-5-5"></path></svg> دریافت گزارش PDF</span>
-      </div>
+      <ul class="ribbon" aria-label="خلاصه امکانات چک‌یار">
+        <li class="ribbon-item">
+          <span class="ribbon-icon" aria-hidden="true"><!-- @license lucide-static v0.468.0 - ISC -->
+          <svg class="lucide lucide-camera" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox=
+          "0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d=
+          "M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path>
+          <circle cx="12" cy="13" r="3"></circle></svg></span>
+          <span class="ribbon-text">ثبت عکس و وضعیت ملک</span>
+        </li>
+        <li class="ribbon-item">
+          <span class="ribbon-icon" aria-hidden="true"><!-- @license lucide-static v0.468.0 - ISC -->
+          <svg class="lucide lucide-badge-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox=
+          "0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d=
+          "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path>
+          <path d="m9 12 2 2 4-4"></path></svg></span>
+          <span class="ribbon-text">بررسی و تأیید مستأجر</span>
+        </li>
+        <li class="ribbon-item">
+          <span class="ribbon-icon" aria-hidden="true"><!-- @license lucide-static v0.468.0 - ISC -->
+          <svg class="lucide lucide-file-check-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox=
+          "0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4"></path>
+          <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+          <path d="m3 15 2 2 4-4"></path></svg></span>
+          <span class="ribbon-text">دریافت گزارش PDF</span>
+        </li>
+      </ul>
       <section id="benefits" class="section reveal">
         <div class="label">
           دو طرفِ یک شروع تازه
@@ -212,30 +219,67 @@
           </article>
         </div>
       </section>
-      <section id="how" class="section reveal" style="padding-top:10px">
-        <div class="center">
+      <section id="how" class="section reveal">
+        <div class="how-intro center">
           <div class="label">
             ساده‌تر از چیزی که فکر می‌کنید
           </div>
           <h2 class="heading">از درِ خونه تا گزارش تحویل</h2>
+          <p class="sectionintro">سه مرحله کوتاه؛ از ثبت جزئیات تا دریافت گزارش نهایی.</p>
         </div>
-        <div class="steps">
-          <article class="step">
-            <span class="number">۰۱ / ثبت جزئیات</span>
+        <ol class="steps" aria-label="مراحل کار با چک‌یار">
+          <li class="step">
+            <div class="step-marker">
+              <span class="step-node">۱</span>
+            </div>
+            <div class="step-top">
+              <span class="step-icon" aria-hidden="true"><!-- @license lucide-static v0.468.0 - ISC -->
+              <svg class="lucide lucide-clipboard-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect>
+              <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+              <path d="m9 14 2 2 4-4"></path></svg></span>
+              <p class="step-phase">ثبت جزئیات</p>
+            </div>
             <h3>با هم، خونه رو مرور کنید.</h3>
             <p>اتاق به اتاق پیش برید؛ عکس بگیرید، وضعیت رو بنویسید و عدد کنتورها رو ثبت کنید.</p>
-          </article>
-          <article class="step">
-            <span class="number">۰۲ / بررسی و تأیید</span>
+          </li>
+          <li class="step">
+            <div class="step-marker">
+              <span class="step-node">۲</span>
+            </div>
+            <div class="step-top">
+              <span class="step-icon" aria-hidden="true"><!-- @license lucide-static v0.468.0 - ISC -->
+              <svg class="lucide lucide-badge-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d=
+              "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path>
+              <path d="m9 12 2 2 4-4"></path></svg></span>
+              <p class="step-phase">بررسی و تأیید</p>
+            </div>
             <h3>هر دو، از جزئیات خبر دارید.</h3>
             <p>مالک گزارش رو منتشر می‌کنه و مستأجر همون نسخه رو می‌بینه و تأیید می‌کنه.</p>
-          </article>
-          <article class="step">
-            <span class="number">۰۳ / دریافت گزارش</span>
+          </li>
+          <li class="step">
+            <div class="step-marker">
+              <span class="step-node">۳</span>
+            </div>
+            <div class="step-top">
+              <span class="step-icon" aria-hidden="true"><!-- @license lucide-static v0.468.0 - ISC -->
+              <svg class="lucide lucide-file-check-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4"></path>
+              <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+              <path d="m3 15 2 2 4-4"></path></svg></span>
+              <p class="step-phase">دریافت گزارش</p>
+            </div>
             <h3>یک نسخه برای هر دو نفر.</h3>
             <p>گزارش PDF رو دریافت کنید تا جزئیات این تحویل، برای مراجعه بعدی همراهتون باشه.</p>
-          </article>
-        </div>
+          </li>
+        </ol>
       </section>
       <section class="report reveal">
         <div>
@@ -280,25 +324,9 @@
       </section>
       <section id="faq" class="section reveal" aria-labelledby="faq-title">
         <div class="faq-intro">
-          <span class="faq-emblem"><svg aria-hidden="true" focusable="false" class="lucide lucide-house" xmlns=
-          "http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentcolor"
-          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
-          <path d=
-          "M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-          </svg></span>
-          <div class="label">
-            با خیال راحت شروع کنید
-          </div>
-          <h2 id="faq-title" class="heading">سؤال از شما،<br>
-          جواب از چک‌یار.</h2>
+          <div class="label">با خیال راحت شروع کنید</div>
+          <h2 id="faq-title" class="heading">سؤال از شما، جواب از چک‌یار.</h2>
           <p class="sectionintro">چند جواب کوتاه، برای اینکه قبل از اولین تحویل، همه‌چیز روشن باشه.</p>
-          <div class="faq-aside-note">
-            <svg aria-hidden="true" focusable="false" class="lucide lucide-check" xmlns="http://www.w3.org/2000/svg"
-            width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M20 6 9 17l-5-5"></path></svg><span>از شروع کار تا دریافت گزارش</span>
-          </div>
         </div>
         <div class="faq">
           <details class="faq-card" open>
@@ -310,6 +338,7 @@
               "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path>
               <path d="m9 12 2 2 4-4"></path></svg></span><span class="faq-question"><span class="faq-topic">هزینه
               استفاده</span><span>استفاده از چک‌یار رایگانه؟</span></span>
+              <span class="faq-toggle" aria-hidden="true">+</span>
             </summary>
             <div class="faq-answer">
               <p>بله، در حال حاضر استفاده از چک‌یار رایگانه.</p>
@@ -325,6 +354,7 @@
               <circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle></svg></span><span class=
               "faq-question"><span class="faq-topic">حساب کاربری</span><span>مستأجر هم باید حساب داشته
               باشه؟</span></span>
+              <span class="faq-toggle" aria-hidden="true">+</span>
             </summary>
             <div class="faq-answer">
               <p>بله، مستأجر برای دیدن و تأیید گزارش، با شماره موبایل خودش وارد حساب می‌شه؛ همون شماره‌ای که مالک در
@@ -340,6 +370,7 @@
               <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
               <path d="m3 15 2 2 4-4"></path></svg></span><span class="faq-question"><span class="faq-topic">نسخه‌های
               گزارش</span><span>بعد از انتشار، گزارش تغییر می‌کنه؟</span></span>
+              <span class="faq-toggle" aria-hidden="true">+</span>
             </summary>
             <div class="faq-answer">
               <p>هر بار انتشار، یک نسخه مشخص از گزارش ثبت می‌کنه. تأیید مستأجر هم مربوط به همون نسخه‌ست.</p>
@@ -354,6 +385,7 @@
               <polyline points="7 10 12 15 17 10"></polyline>
               <line x1="12" x2="12" y1="15" y2="3"></line></svg></span><span class="faq-question"><span class=
               "faq-topic">دریافت گزارش</span><span>گزارش رو می‌تونیم نگه داریم؟</span></span>
+              <span class="faq-toggle" aria-hidden="true">+</span>
             </summary>
             <div class="faq-answer">
               <p>بله، مالک و مستأجری که به پرونده دسترسی دارن، می‌تونن PDF گزارش منتشرشده رو دریافت کنن.</p>
@@ -394,13 +426,29 @@
         </div>
       </section>
     </main>
-    <footer>
-      <span class="brand" style="font-size:21px">چک‌یار</span><span>برای شروع‌های روشن، برای هر دو
-      طرف.</span><span>تحویل خونه، با خیال راحت.</span>
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <div class="footer-identity">
+            <a class="brand footer-logo" href="#"><img class="mark" src="../mobile/assets/images/app_logo.png" alt=""
+            width="34" height="34" decoding="async"><span class="footer-name">چک‌یار</span></a>
+            <p class="footer-tagline">تحویل خونه، با خیال راحت.</p>
+          </div>
+        </div>
+        <nav class="footer-nav" aria-label="پیوندهای پاورقی">
+          <a href="#benefits">برای مالک و مستأجر</a><a href="#how">چطور کار می‌کنه؟</a><a href="#faq">سؤال‌های
+          شما</a><a href="#download">دانلود اپ</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-aside">برای شروع‌های روشن، برای هر دو طرف.</p>
+        <a class="footer-top" href="#">بازگشت به بالا <span aria-hidden="true"><!-- @license lucide-static v0.468.0 - ISC -->
+        <svg class="lucide lucide-arrow-up" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox=
+        "0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m5 12 7-7 7 7"></path>
+        <path d="M12 19V5"></path></svg></span></a>
+      </div>
     </footer>
-  </div>
-  <div class="preview">
-    پیش‌نمایش طراحی · رابط اپ و گزارش، نمایشی هستند
   </div>
   <dialog id="modal">
     <div id="modalcontent"></div><button class="close" id="close">بستن</button>
