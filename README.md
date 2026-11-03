@@ -1,4 +1,4 @@
-# CheckYar website preview
+# CheckYaar website preview
 
 Interactive Persian RTL marketing mockup for property owners and tenants. It uses the mobile app's blue accent, gray canvas, Vazirmatn font, rounded controls, and locally embedded Lucide icons (v0.468.0; license included).
 
