@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "99ZK6DRLA4.ir.checkyaar.checkyaar",
+        "paths": ["/invite/*"]
+      }
+    ]
+  }
+}
