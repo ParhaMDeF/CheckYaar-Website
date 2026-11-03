@@ -3,7 +3,7 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "ir.checkyaar.checkyaar",
+      "package_name": "ir.checkyaar.app",
       "sha256_cert_fingerprints": [
         "4E:88:23:52:DE:1F:03:D2:57:15:C0:1D:C5:D8:53:90:2D:D8:76:F4:37:48:BB:42:5C:4E:1E:A9:1B:BB:A3:10"
       ]
