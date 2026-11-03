@@ -60,3 +60,27 @@ document.querySelectorAll("[data-store]").forEach((button) => {
     openStoreNotice(button.dataset.store);
   });
 });
+
+function detectDevicePlatform() {
+  const platform = navigator.userAgentData?.platform || navigator.platform || "";
+  const userAgent = navigator.userAgent || "";
+
+  if (/android/i.test(platform) || /android/i.test(userAgent)) return "android";
+  if (/iphone|ipad|ipod/i.test(userAgent)) return "ios";
+
+  // iPadOS can identify itself as a Mac while still reporting touch input.
+  if (/mac/i.test(platform) && navigator.maxTouchPoints > 1) return "ios";
+
+  return null;
+}
+
+function showRelevantStores() {
+  const platform = detectDevicePlatform();
+  if (!platform) return;
+
+  document.querySelectorAll("[data-platform]").forEach((button) => {
+    button.hidden = button.dataset.platform !== platform;
+  });
+}
+
+showRelevantStores();
