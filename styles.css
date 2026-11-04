@@ -1863,3 +1863,10 @@ dialog p {
     box-shadow:none;
   }
 }
+
+/* Keep the privacy and help content aligned with the existing audience cards. */
+.trust-section article { scroll-margin-top:24px; }
+.trust-section h2 { font-size:22px; margin:10px 0 16px; }
+.trust-section .panel p + p { margin-top:16px; }
+.trust-section .btn { margin-top:16px; }
+.trust-section .support-status { font-size:13px; color:#636366; }
