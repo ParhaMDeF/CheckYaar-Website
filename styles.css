@@ -1,12 +1,12 @@
 @font-face {
   font-family:v;
   font-display:swap;
-  src:url('../mobile/assets/fonts/Vazirmatn-Regular.ttf')
+  src:url('assets/brand/Vazirmatn-Regular.ttf')
 }
 @font-face {
   font-family:v;
   font-display:swap;
-  src:url('../mobile/assets/fonts/Vazirmatn-Bold.ttf');
+  src:url('assets/brand/Vazirmatn-Bold.ttf');
   font-weight:700
 }
 * {
