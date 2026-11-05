@@ -159,11 +159,20 @@ h1 em:after {
   margin-top:20px;
 }
 .scene {
-  height:490px;
+  width:100%;
+  height:auto;
   position:relative;
   display:grid;
   place-items:center;
   isolation:isolate;
+}
+.hero-art {
+  display:block;
+  width:100%;
+  max-width:560px;
+  height:auto;
+  object-fit:contain;
+  animation:float 7s ease-in-out infinite;
 }
 .orb {
   position:absolute;
@@ -181,13 +190,13 @@ h1 em:after {
   transform:rotate(-20deg);
 }
 .phone {
-  width:258px;
+  width:300px;
   background:#fff;
   border:7px solid #1C1C1E;
   border-radius:39px;
   padding:20px 16px 16px;
   box-shadow:20px 28px 60px #354d3026;
-  transform:rotate(-6deg);
+  transform:rotate(-6deg) scale(1.25);
   position:relative;
   animation:float 7s ease-in-out infinite;
 }
@@ -207,45 +216,35 @@ h1 em:after {
 .phone h3 {
   font-size:17px;
   margin:15px 0 2px;
+  display:flex;
+  align-items:center;
+  gap:7px;
+}
+.phone-mark {
+  width:22px;
+  height:22px;
+  object-fit:cover;
+  border-radius:6px;
+  flex:0 0 auto;
 }
 .address {
   font-size:10px;
   color:#8E8E93;
 }
 .room {
-  height:123px;
+  height:136px;
   margin:17px 0;
   background:#e8e1d1;
   position:relative;
   overflow:hidden;
   border-radius:12px;
-  background:linear-gradient(155deg,#ece6d9 70%,#c8b99a 70%);
 }
-.window {
-  position:absolute;
-  top:13px;
-  right:25px;
-  width:55px;
-  height:72px;
-  background:linear-gradient(90deg,transparent 47%,#fdfbf2 47%,#fdfbf2 53%,transparent 53%),linear-gradient(0deg,#b9c8bb 47%,#fdfbf2 47%,#fdfbf2 53%,#c9d8cd 53%);
-  border:5px solid #fcfbef;
-}
-.sofa {
-  position:absolute;
-  bottom:15px;
-  left:23px;
-  background:#9ba88e;
-  width:110px;
-  height:39px;
-  border-radius:10px 10px 5px 5px;
-  border-bottom:8px solid #7d8a72;
-  box-shadow:0 5px 0 -2px #726e55;
-}
-.plant {
-  position:absolute;
-  bottom:9px;
-  right:26px;
-  font-size:39px;
+.room-image {
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 58%;
 }
 .progress {
   display:flex;
@@ -323,13 +322,6 @@ h1 em:after {
   background:#007AFF1F;
   padding:5px 11px;
   border-radius:10px;
-}
-.tinyflower {
-  position:absolute;
-  left:43px;
-  bottom:30px;
-  color:#007AFF;
-  font-size:66px;
 }
 .ribbon {
   display:grid;
@@ -918,26 +910,6 @@ dialog .paper {
 .phonebutton {
   border-radius:var(--radius-sm);
 }
-.room {
-  background:linear-gradient(155deg,#e5e5ea 70%,#d1d1d6 70%);
-}
-.window {
-  background:linear-gradient(90deg,transparent 47%,white 47%,white 53%,transparent 53%),linear-gradient(0deg,#bddbff 47%,white 47%,white 53%,#deedff 53%);
-  border-color:white;
-}
-.sofa {
-  background:#7da9da;
-  border-color:#5d8abd;
-  box-shadow:0 5px 0 -2px #636366;
-}
-.plant {
-  color:#34c759;
-}
-.plant .lucide {
-  height:40px;
-  width:40px;
-  stroke-width:1.5;
-}
 .floatcard {
   border-radius:var(--radius-xl);
   border:1px solid #3c3c430d;
@@ -965,21 +937,6 @@ dialog .paper {
 .floatcard.approved .floaticon {
   background:#D1FAE5;
   color:#167334;
-}
-.tinyflower {
-  display:grid;
-  place-items:center;
-  background:white;
-  width:62px;
-  height:62px;
-  border:1px solid var(--separator);
-  border-radius:18px;
-  transform:rotate(12deg);
-  box-shadow:0 8px 22px #007aff0d;
-}
-.tinyflower .lucide {
-  width:29px;
-  height:29px;
 }
 .panel {
   background:white;
@@ -1309,7 +1266,7 @@ h1 {
 }
 .scene {
   width:100%;
-  max-width:520px;
+  max-width:600px;
   justify-self:center;
   scale:1;
 }
@@ -1454,7 +1411,11 @@ dialog p {
   }
   .scene {
     max-width:480px;
-    height:500px;
+    height:auto;
+  }
+  .phone {
+    width:280px;
+    transform:rotate(-6deg) scale(1.08);
   }
   .floatcard {
     max-width:200px;
@@ -1553,13 +1514,16 @@ dialog p {
     margin-top:16px;
   }
   .scene {
-    height:auto;
     display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:12px;
+    grid-template-columns:minmax(0,1fr);
+    gap:0;
     max-width:430px;
     padding:20px 0 0;
     margin:0;
+  }
+  .hero-art {
+    max-width:100%;
+    animation:none;
   }
   .phone {
     grid-column:1/-1;
@@ -1609,9 +1573,6 @@ dialog p {
   .floaticon .lucide {
     width:18px;
     height:18px;
-  }
-  .tinyflower {
-    display:none;
   }
   .ribbon {
     grid-template-columns:minmax(0,1fr);
