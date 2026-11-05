@@ -12,4 +12,4 @@ Open http://localhost:8080/website/ in a browser. All files used by the page are
 
 The page includes responsive layouts, section reveals, reduced-motion support, expandable FAQs, and a sample-report dialog. Markup, styles, and interactions live in `index.html`, `styles.css`, and `script.js` respectively. The phone interface and report are illustrative. Download buttons explain that store URLs still need to be connected; they do not download the app.
 
-This is a design preview, not a deployed production website. Real store listings, app screenshots, report assets, privacy information, and support details still need to be supplied before publication.
+This is a design preview, not a deployed production website. Real store listings, app screenshots, report assets, and support details still need to be supplied before publication. The privacy page documents the current app behavior and should be reviewed when the app or its data-handling practices change.

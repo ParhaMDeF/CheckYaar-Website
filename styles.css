@@ -1870,3 +1870,99 @@ dialog p {
 .trust-section .panel p + p { margin-top:16px; }
 .trust-section .btn { margin-top:16px; }
 .trust-section .support-status { font-size:13px; color:#636366; }
+
+.faq-answer a,
+.privacy-card a {
+  color:#007AFF;
+  font-weight:700;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+.trust-section #privacy .btn { display:inline-flex; }
+.privacy-main {
+  max-width:860px;
+  margin:0 auto;
+  padding:56px 0 72px;
+}
+.privacy-hero {
+  padding:24px 0 32px;
+}
+.privacy-hero .label {
+  margin-bottom:10px;
+}
+.privacy-hero h1 {
+  margin:0;
+  font-size:clamp(32px,5vw,48px);
+  line-height:1.5;
+}
+.privacy-lead {
+  max-width:760px;
+  margin:14px 0 12px;
+  color:#636366;
+  font-size:17px;
+}
+.privacy-updated {
+  color:#8E8E93;
+  font-size:13px;
+}
+.privacy-content {
+  display:grid;
+  gap:16px;
+}
+.privacy-card {
+  padding:28px 32px;
+  background:#fff;
+  border:1px solid #3C3C4314;
+  border-radius:22px;
+  box-shadow:0 12px 32px #1c1c1e0a;
+}
+.privacy-card h2 {
+  margin:0 0 12px;
+  font-size:21px;
+  line-height:1.7;
+}
+.privacy-card p,
+.privacy-card li {
+  color:#505055;
+  font-size:15px;
+  line-height:2.1;
+}
+.privacy-card p { margin:0; }
+.privacy-card p + p { margin-top:12px; }
+.privacy-card ul {
+  margin:0;
+  padding-right:22px;
+}
+.privacy-card li + li { margin-top:8px; }
+.privacy-card strong { color:#1C1C1E; }
+.privacy-footer {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+  padding:24px 0 36px;
+  border-top:1px solid #1C1C1E17;
+}
+.privacy-footer .brand { font-size:20px; }
+.privacy-footer .mark { width:34px; height:34px; }
+.privacy-footer nav {
+  height:auto;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-start;
+  gap:12px 24px;
+  border:0;
+  font-size:13px;
+}
+@media(max-width:720px) {
+  .privacy-main { padding:34px 0 48px; }
+  .privacy-hero { padding-top:16px; }
+  .privacy-lead { font-size:15px; }
+  .privacy-card { padding:22px 20px; border-radius:18px; }
+  .privacy-card h2 { font-size:19px; }
+  .privacy-card p,
+  .privacy-card li { font-size:14px; }
+  .privacy-footer { flex-direction:column; align-items:stretch; gap:14px; }
+  .privacy-footer .brand { justify-content:center; }
+  .privacy-footer nav { justify-content:center; }
+}
