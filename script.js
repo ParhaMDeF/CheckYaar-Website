@@ -84,3 +84,57 @@ function showRelevantStores() {
 }
 
 showRelevantStores();
+
+function initializeHeroSlideshow() {
+  const slideshow = document.querySelector("[data-hero-slideshow]");
+  if (!slideshow) return;
+
+  const images = [...slideshow.querySelectorAll(".hero-art")];
+  const headings = images.map((image) => document.getElementById(image.dataset.heading));
+  const toggle = document.querySelector("[data-hero-toggle]");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  // Decode before rotating so a slow connection cannot cause an empty frame.
+  Promise.allSettled(images.map((image) => image.decode())).then(() => {
+    const slides = images.filter((image) => image.naturalWidth > 0);
+    if (!slides.length) return;
+
+    let currentIndex = 0;
+    let paused = false;
+    let timer;
+
+    function showSlide(index) {
+      currentIndex = index;
+      images.forEach((image, imageIndex) => {
+        const active = image === slides[index];
+        image.classList.toggle("is-active", active);
+        image.setAttribute("aria-hidden", String(!active));
+        headings[imageIndex].classList.toggle("is-active", active);
+        headings[imageIndex].setAttribute("aria-hidden", String(!active));
+      });
+    }
+
+    function updatePlayback() {
+      window.clearInterval(timer);
+      toggle.hidden = reducedMotion.matches || slides.length < 2;
+      if (paused || document.hidden || reducedMotion.matches || slides.length < 2) return;
+
+      timer = window.setInterval(() => {
+        showSlide((currentIndex + 1) % slides.length);
+      }, 3000);
+    }
+
+    toggle.addEventListener("click", () => {
+      paused = !paused;
+      toggle.textContent = paused ? "ادامه نمایش خودکار" : "توقف نمایش خودکار";
+      updatePlayback();
+    });
+    document.addEventListener("visibilitychange", updatePlayback);
+    reducedMotion.addEventListener("change", updatePlayback);
+
+    showSlide(0);
+    updatePlayback();
+  });
+}
+
+initializeHeroSlideshow();

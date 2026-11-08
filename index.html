@@ -46,8 +46,23 @@
           </div>
         </div>
         <div class="scene">
-          <img class="hero-art" src="assets/hero/handover-phone-illustration.png"
-          alt="پیش‌نمایش گزارش تحویل ملک در اپلیکیشن چک‌یار" width="1190" height="1322" decoding="async">
+          <div class="hero-headings">
+            <h2 class="hero-heading is-active" id="hero-owner-heading">مرور پرونده توسط مالک</h2>
+            <h2 class="hero-heading" id="hero-inspection-heading" aria-hidden="true">ثبت ایراد با عکس و توضیح</h2>
+            <h2 class="hero-heading" id="hero-tenant-heading" aria-hidden="true">بررسی و تأیید گزارش توسط مستأجر</h2>
+            <h2 class="hero-heading" id="hero-preview-heading" aria-hidden="true">مشاهده جزئیات و عکس‌های بازدید</h2>
+          </div>
+          <div class="hero-slideshow" id="hero-slideshow" data-hero-slideshow>
+            <img class="hero-art is-active" src="assets/hero/phone-inspection-real-ui.png" data-heading="hero-owner-heading"
+            alt="نمای کلی پرونده و مراحل تحویل ملک برای مالک" width="1086" height="1448" decoding="async" fetchpriority="high">
+            <img class="hero-art" src="assets/hero/phone-inspection-flow-real-ui.png" data-heading="hero-inspection-heading"
+            alt="ثبت ایراد کابینت آشپزخانه همراه با توضیح و عکس در چک‌یار" width="1086" height="1448" decoding="async" aria-hidden="true">
+            <img class="hero-art" src="assets/hero/phone-review-real-ui.png" data-heading="hero-tenant-heading"
+            alt="بررسی و تأیید نسخه گزارش توسط مستأجر" width="1086" height="1448" decoding="async" aria-hidden="true">
+            <img class="hero-art" src="assets/hero/phone-owner-inspection-preview-real-ui.png" data-heading="hero-preview-heading"
+            alt="پیش‌نمایش وضعیت کابینت همراه با توضیح مالک و عکس ایراد" width="1086" height="1448" decoding="async" aria-hidden="true">
+          </div>
+          <button class="hero-toggle" type="button" data-hero-toggle aria-controls="hero-slideshow" hidden>توقف نمایش خودکار</button>
         </div>
       </section>
       <ul class="ribbon" aria-label="خلاصه امکانات چک‌یار">

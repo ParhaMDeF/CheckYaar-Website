@@ -166,13 +166,64 @@ h1 em:after {
   place-items:center;
   isolation:isolate;
 }
+.hero-headings {
+  display:grid;
+  place-items:center;
+  width:100%;
+  max-width:560px;
+  height:88px;
+  text-align:center;
+}
+.hero-heading {
+  grid-area:1 / 1;
+  margin:0;
+  padding:0 12px 16px;
+  color:var(--text);
+  font-size:clamp(16px,1.6vw,20px);
+  font-weight:700;
+  line-height:1.65;
+  opacity:0;
+  transition:opacity 600ms ease;
+}
+.hero-heading.is-active {
+  opacity:1;
+}
+.hero-slideshow {
+  display:grid;
+  width:100%;
+  max-width:560px;
+  animation:float 7s ease-in-out infinite;
+}
 .hero-art {
+  grid-area:1 / 1;
   display:block;
   width:100%;
   max-width:560px;
   height:auto;
   object-fit:contain;
-  animation:float 7s ease-in-out infinite;
+  opacity:0;
+  transition:opacity 600ms ease;
+}
+.hero-art.is-active {
+  opacity:1;
+}
+.hero-toggle {
+  margin-top:12px;
+  padding:8px 16px;
+  border:1px solid var(--separator);
+  border-radius:24px;
+  background:transparent;
+  color:#636366;
+  font:inherit;
+  font-size:12px;
+  cursor:pointer;
+}
+.hero-toggle:hover {
+  color:var(--accent);
+}
+.hero-toggle:focus-visible {
+  outline:2px solid var(--accent);
+  outline-offset:3px;
 }
 .orb {
   position:absolute;
@@ -1523,6 +1574,8 @@ dialog p {
   }
   .hero-art {
     max-width:100%;
+  }
+  .hero-slideshow {
     animation:none;
   }
   .phone {
