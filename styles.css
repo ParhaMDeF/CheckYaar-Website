@@ -1926,9 +1926,11 @@ dialog p {
 
 /* Keep the privacy and help content aligned with the existing audience cards. */
 .trust-section article { scroll-margin-top:24px; }
+.trust-section .audience { align-items:stretch; }
+.trust-section .panel { display:flex; flex-direction:column; height:100%; }
 .trust-section h2 { font-size:22px; margin:10px 0 16px; }
 .trust-section .panel p + p { margin-top:16px; }
-.trust-section .btn { margin-top:16px; }
+.trust-section .panel .btn { margin-top:auto; }
 .trust-section .support-status { font-size:13px; color:#636366; }
 
 .faq-answer a,
@@ -2066,14 +2068,14 @@ dialog p {
 .article-toc { display:grid; gap:6px; }
 .article-toc a { display:block; padding:6px 0; }
 .article-callout { border-right:4px solid #007AFF; background:#F4F8FF; }
-.article-faq details + details { margin-top:14px; padding-top:14px; border-top:1px solid #1C1C1E17; }
-.article-faq summary { cursor:pointer; font-weight:700; }
-.article-faq p { margin-top:8px; }
-.guide-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
-.guide-card { display:flex; flex-direction:column; gap:10px; padding:22px; border:1px solid #3C3C4317; border-radius:18px; background:#fff; }
+.article-faq .faq { margin-top:12px; }
+.article-faq .faq-answer p { margin:0; }
+.guide-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; align-items:stretch; }
+.guide-card { display:flex; flex-direction:column; gap:10px; height:100%; padding:22px; border:1px solid #3C3C4317; border-radius:18px; background:#fff; }
 .guide-card h2,.guide-card h3 { margin:0; font-size:20px; line-height:1.6; }
-.guide-card p { margin:0; color:#636366; font-size:14px; }
+.guide-card p { margin:0; color:#636366; font-size:14px; flex:1; }
 .guide-card a { color:#007AFF; font-weight:700; }
+.guide-card > a { margin-top:auto; }
 .guide-cta { margin-top:26px; }
 @media(max-width:760px) {
   .article-main { padding:28px 0 54px; }
