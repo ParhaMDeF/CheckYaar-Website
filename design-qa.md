@@ -73,3 +73,7 @@ Removed the playback button so no pause or “continue autoplay” control appea
 ### Kitchen inspection report card
 
 Removed the sample-report button and updated the report card to show the kitchen as “ایراد دارد,” with the matching cabinet-damage photo and the inspection note “روکش گوشه بالای در کابینت کنار سینک لب‌پر شده.” The sample-report-only modal handler was removed; store notice dialogs remain available.
+
+### Compact kitchen inspection card
+
+Reworked the white report card into an RTL two-column layout, with the cabinet photo beside the issue status, note, and saved-inspection stamp. In Chrome, the blue report panel measured about 436px tall at the default desktop width, 571px at 390px, and 619px at 320px. The photo frame stayed beside the details at both mobile widths, and the document had no horizontal overflow. The hero slideshow and adjacent sections remained unchanged.
