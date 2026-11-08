@@ -65,3 +65,11 @@ Added the supplied read-only cabinet detail screenshot after tenant overview. Th
 Added the four approved headings above the phone in an 88px reserved area. Each heading is associated with its image and switches its active/accessibility state in the same update; both use a 600ms opacity transition. The heading stays still while the phone retains its existing float motion.
 
 Observed a complete autoplay cycle in Chrome: all four headings matched their images, both fade durations were 0.6 seconds, and the heading-area and overall scene heights stayed constant. At a 320px mobile viewport, all four headings fit within the reserved area and the page had no horizontal overflow. Pause/resume was preserved, and playback was restored after capturing desktop and mobile screenshots. Existing reduced-motion CSS also disables heading transitions.
+
+### Simplified hero slideshow controls
+
+Removed the playback button so no pause or “continue autoplay” control appears below the phone. Automatic rotation still runs every three seconds, pauses while the tab is hidden, and stays static when reduced motion is enabled.
+
+### Kitchen inspection report card
+
+Removed the sample-report button and updated the report card to show the kitchen as “ایراد دارد,” with the matching cabinet-damage photo and the inspection note “روکش گوشه بالای در کابینت کنار سینک لب‌پر شده.” The sample-report-only modal handler was removed; store notice dialogs remain available.

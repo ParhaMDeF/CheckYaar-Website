@@ -26,17 +26,6 @@ function closeModal() {
   modal.close();
 }
 
-function openSampleReport() {
-  const report = document.querySelector("#paper").cloneNode(true);
-  report.removeAttribute("id");
-
-  const note = document.createElement("p");
-  note.textContent =
-    "این نمونه برای بررسی طراحی وب‌سایت است؛ گزارش واقعی برنامه در نسخه نهایی جایگزین می‌شود.";
-
-  openModal(report, note);
-}
-
 function openStoreNotice(storeName) {
   const title = document.createElement("h3");
   title.textContent = `دانلود از ${storeName}`;
@@ -49,7 +38,6 @@ function openStoreNotice(storeName) {
 }
 
 document.querySelector("#close").addEventListener("click", closeModal);
-document.querySelector("#sample").addEventListener("click", openSampleReport);
 
 modal.addEventListener("click", (event) => {
   if (event.target === modal) closeModal();
@@ -91,7 +79,6 @@ function initializeHeroSlideshow() {
 
   const images = [...slideshow.querySelectorAll(".hero-art")];
   const headings = images.map((image) => document.getElementById(image.dataset.heading));
-  const toggle = document.querySelector("[data-hero-toggle]");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
   // Decode before rotating so a slow connection cannot cause an empty frame.
@@ -100,7 +87,6 @@ function initializeHeroSlideshow() {
     if (!slides.length) return;
 
     let currentIndex = 0;
-    let paused = false;
     let timer;
 
     function showSlide(index) {
@@ -116,19 +102,13 @@ function initializeHeroSlideshow() {
 
     function updatePlayback() {
       window.clearInterval(timer);
-      toggle.hidden = reducedMotion.matches || slides.length < 2;
-      if (paused || document.hidden || reducedMotion.matches || slides.length < 2) return;
+      if (document.hidden || reducedMotion.matches || slides.length < 2) return;
 
       timer = window.setInterval(() => {
         showSlide((currentIndex + 1) % slides.length);
       }, 3000);
     }
 
-    toggle.addEventListener("click", () => {
-      paused = !paused;
-      toggle.textContent = paused ? "ادامه نمایش خودکار" : "توقف نمایش خودکار";
-      updatePlayback();
-    });
     document.addEventListener("visibilitychange", updatePlayback);
     reducedMotion.addEventListener("change", updatePlayback);
 
